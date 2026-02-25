@@ -1,4 +1,5 @@
 import HomeImage from "../../assets/home_image.png";
+import ListaCategorias from "../../components/categoria/listacategorias/ListaCategorias";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <ListaCategorias />
     </>
   );
 }

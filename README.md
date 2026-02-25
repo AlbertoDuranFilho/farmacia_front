@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+### 💊 PharmaClick
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**"A saúde a um clique de você."**
 
-Currently, two official plugins are available:
+O PharmaClick é uma aplicação web front-end desenvolvida para o gerenciamento de categorias em um sistema de farmácia. O projeto foca em oferecer uma interface limpa, moderna e intuitiva para que administradores possam organizar os produtos da farmácia de forma eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### ✨ Destaques
 
-## React Compiler
+- **Gerenciamento de Categorias (CRUD):** Fluxo completo para cadastrar, listar, atualizar e deletar categorias de produtos.
+- **Interface Moderna:** Estilização responsiva e componentes visuais otimizados para uma melhor experiência do usuário.
+- **Navegação Fluida:** Sistema de rotas que permite a transição entre páginas sem recarregamento do navegador.
+- **Feedback em Tempo Real:** Notificações personalizadas para informar o sucesso ou erro em cada operação realizada.
+- **Consumo de API:** Integração robusta com o backend para persistência dos dados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### 💻 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React + TypeScript:** Base do projeto para uma interface reativa e tipagem estática, garantindo maior segurança no código.
+- **Vite:** Ferramenta de build ultra-rápida para o desenvolvimento front-end moderno.
+- **Tailwind CSS:** Framework utilitário para estilização rápida, responsiva e personalizada.
+- **React-Router-DOM:** Gerenciamento de rotas e navegação entre as páginas da aplicação.
+- **Axios:** Cliente HTTP para realizar requisições à API do backend.
+- **PhosphorIcons:** Biblioteca de ícones flexível e consistente para melhorar a semântica visual.
+- **ReactJS-popup:** Utilizado para a criação de modais e janelas de confirmação.
+- **React-toastify:** Implementação de alertas (toasts) elegantes e não intrusivos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Funcionalidades Implementadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Atualmente, o projeto foca na gestão administrativa de categorias:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Listar Categorias:** Visualização de todas as categorias cadastradas em uma tabela ou lista organizada.
+2.  **Cadastrar Categoria:** Formulário validado para a criação de novas classificações de produtos.
+3.  **Atualizar Categoria:** Edição de nomes ou descrições de categorias já existentes.
+4.  **Deletar Categoria:** Remoção de categorias com confirmação visual para evitar exclusões acidentais.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 📂 Estrutura do Projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `src/`
+  - `components/` — Componentes reutilizáveis (Navbar, Footer, Cards, Modais).
+  - `pages/` — Páginas principais da aplicação (Home, Categorias, Formulários).
+  - `services/` — Configuração do Axios e chamadas para a API.
+  - `models/` — Definição das interfaces TypeScript (Ex: `Categoria.ts`).
+  - `App.tsx` — Configuração das rotas e provedores globais.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Como executar o projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  Clone o repositório:
+    ```bash
+    git clone https://github.com/albertoduranfilho/farmacia-front.git
+    ```
+2.  Acesse a pasta do projeto:
+    ```bash
+    cd farmacia-front
+    ```
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+4.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+5.  Abra o navegador no endereço indicado pelo Vite.
+
+#### 🚀 Próximos Passos (Roadmap)
+
+- [ ] Implementação do CRUD de Produtos.
+- [ ] Sistema de autenticação de usuários (Login/Logout).
+- [ ] Barra de busca global para categorias e produtos.
+- [ ] Integração com gateway de pagamento (simulado).
+
+---
+
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/alberto-janeiro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/67593467?v=44" width="100px;" alt=""/><br /><sub><b>Alberto Durán</b></sub></a><br />❤️</td>
+  </tr>
+</table>
